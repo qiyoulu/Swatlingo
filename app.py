@@ -1,5 +1,5 @@
 # from waitress import serve
-import ssl, socket, openai, datetime, os
+import ssl, socket, openai, datetime
 
 # Set Up ChatGPT Connection
 from crypt import methods
@@ -473,11 +473,11 @@ def updateMinutesSpent():
     
 if __name__ == "__main__":
     # path = '/etc/letsencrypt/live/swe-swatlingo.sccs.swarthmore.edu/'
-    # context = ('fullchain.pem', 'privkey.pem')
-    # fullchain = 'fullchain.pem'
-    # privkey = 'privkey.pem'
-    app.run("0.0.0.0", port=1234, debug=False)#, ssl_context=context)
-    # os.system(f'gunicorn -w 4 -b 0.0.0.0:1234 -k gevent --certfile={fullchain} --keyfile={privkey} app:app')
+    ssl_context = ('fullchain.pem', 'privkey.pem')
+    fullchain = 'fullchain.pem'
+    privkey = 'privkey.pem'
+    # app.run("0.0.0.0", port=1234, debug=False, ssl_context=context)
+    os.system(f'gunicorn -w 4 -b 0.0.0.0:1234 -k gevent --certfile={fullchain} --keyfile={privkey} app:app')
     # serve(app, port=8080)
     # serve(app, host='0.0.0.0', port=1234)
     # ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)

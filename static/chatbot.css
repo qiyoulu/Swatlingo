@@ -1,0 +1,19 @@
+#chat-container {
+  border: 3px solid #331416;
+  background-color: beige;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 5px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  max-height: 400px;
+  margin-top: 1%;
+  overflow-y: scroll;
+}
+.extra-line-output {
+  margin-bottom: 5px; /* Adjust the margin to control the spacing */
+}
+
+.extra-line-next {
+  margin-bottom: 15px;
+}

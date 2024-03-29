@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo: practice in a private room</title>
+    <script src="https://unpkg.com/socket.io-client@4/dist/socket.io.min.js"></script>
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/privatechatroom.js"></script>
+    <script src="../static/email.js"></script>
+    <script>
+      window.addEventListener("load", updatePrivateChatAchievement);
+      setInterval(updateMinutesSpent, 60000);
+    </script>
+  </head>
+  <body>
+    <script src="../static/themes.js"></script>
+    <div class="container container-header">
+      <div class="container">
+        <a href="../home">
+          <img src="../static/home.svg" alt="home" class="icon" />
+        </a>
+      </div>
+      <h1 class="text text-h1">chat in a private room</h1>
+      <!-- <a href="../settings"> -->
+      <img
+        src="../static/light.svg"
+        id="theme-toggle"
+        alt="toggle theme"
+        class="icon"
+        onclick="toggle_theme()"
+      />
+      <!-- </a> -->
+    </div>
+    <div class="container container-room" id="roomsContainer"></div>
+    <div class="spacer"></div>
+    <button
+      class="button button-newroom"
+      type="button"
+      id="clickMeButton"
+      onclick="newRoom()"
+    >
+      make a new room
+    </button>
+  </body>
+</html>

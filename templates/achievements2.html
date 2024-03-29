@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo: achievements</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/email.js"></script>
+    <script>
+      window.addEventListener("load", getTimeStudied);
+      window.addEventListener("load", getChatsSent);
+      window.addEventListener("load", getStreak);
+      window.addEventListener("load", getOtherAchievements);
+    </script>
+  </head>
+  <body>
+    <script src="../static/themes.js"></script>
+    <div class="container container-header">
+      <a href="../home">
+        <img src="../static/home.svg" alt="home" class="icon" />
+      </a>
+      <img src="../static/swatlingo.svg" alt="swatlingo" class="logo" />
+      <!-- <a href="../settings"> -->
+      <img
+        src="../static/light.svg"
+        id="theme-toggle"
+        alt="toggle theme"
+        class="icon"
+        onclick="toggle_theme()"
+      />
+      <!-- </a> -->
+    </div>
+    <div class="container">
+      <p id="username_display"></p>
+      <script>
+        const storedUsername = localStorage.getItem("username");
+        if (storedUsername) {
+          document.getElementById("username_display").textContent +=
+            "Welcome back, " + storedUsername + "!";
+        } else {
+          document.getElementById("username_display").textContent +=
+            "Please log in to track your progress :)";
+        }
+      </script>
+    </div>
+    <div class="container">
+      <div class="container container-achievement">
+        <div class="container container-list">
+          <img
+            src="../static/time.svg"
+            alt="time studied"
+            class="icon-achievements"
+          />
+          <div class="container">
+            <p id="time_studied" class="text text-h4 time_studied"></p>
+            <p class="text text-h4 time_studied">&nbsp;minutes studied!</p>
+          </div>
+        </div>
+        <div class="container container-list">
+          <p id="5_minutes" class="text text-h4">5 minutes</p>
+          <p id="15_minutes" class="text text-h4">15 minutes</p>
+          <p id="30_minutes" class="text text-h4">30 minutes</p>
+          <p id="60_minutes" class="text text-h4">60 minutes</p>
+        </div>
+      </div>
+      <div class="container container-achievement">
+        <div class="container container-list">
+          <img
+            src="../static/chat.svg"
+            alt="chats sent"
+            class="icon-achievements"
+          />
+          <div class="container">
+            <p id="chats_sent" class="text text-h4 chats_sent"></p>
+            <p class="text text-h4 chats_sent">
+              <b>&nbsp;messages sent!</b>
+            </p>
+          </div>
+        </div>
+        <div class="container container-list">
+          <p id="10_chats" class="text text-h4">10 messages</p>
+          <p id="50_chats" class="text text-h4">50 messages</p>
+          <p id="100_chats" class="text text-h4">100 messages</p>
+          <p id="500_chats" class="text text-h4">500 messages</p>
+        </div>
+      </div>
+      <div class="container container-achievement">
+        <div class="container container-list">
+          <img
+            src="../static/streak.svg"
+            alt="streak"
+            class="icon-achievements"
+          />
+          <div class="container">
+            <p id="streak" class="text text-h4 streak"></p>
+            <p class="text text-h4 streak">-day streak!</p>
+          </div>
+        </div>
+        <div class="container container-list">
+          <p id="2_streak" class="text text-h4">2 days</p>
+          <p id="7_streak" class="text text-h4">1 week</p>
+          <p id="14_streak" class="text text-h4">2 weeks</p>
+          <p id="28_streak" class="text text-h4">4 weeks</p>
+        </div>
+      </div>
+      <div class="container container-achievement">
+        <div class="container container-list">
+          <img
+            src="../static/achievements.svg"
+            alt="other achievements"
+            class="icon-achievements"
+          />
+          <p class="text text-h4 other-achievements">
+            <b>other achievements :)</b>
+          </p>
+        </div>
+        <div class="container container-list">
+          <p id="made_account" class="text text-h4">made account</p>
+          <p id="chat_with_chatbot" class="text text-h4">chat with phineas</p>
+          <p id="chat_in_public" class="text text-h4">
+            chat in the public room
+          </p>
+          <p id="chat_in_private" class="text text-h4">
+            chat in a private room
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/email.js"></script>
+    <script>
+      window.addEventListener("load", getStreak);
+    </script>
+  </head>
+  <body>
+    <script src="../static/themes.js"></script>
+    <div class="container container-header">
+      <div class="container">
+        <a href="../achievements">
+          <img src="../static/streak.svg" alt="streak" class="icon" />
+        </a>
+        <h1 class="text text-counter" id="streak"></h1>
+      </div>
+      <img src="../static/swatlingo.svg" alt="swatlingo" class="logo" />
+      <!-- <a href="../settings"> -->
+      <img
+        src="../static/light.svg"
+        id="theme-toggle"
+        alt="toggle theme"
+        class="icon"
+        onclick="toggle_theme()"
+      />
+      <!-- </a> -->
+    </div>
+    <div class="container">
+      <p id="username_display"></p>
+      <script>
+        const storedUsername = localStorage.getItem("username");
+        if (storedUsername) {
+          document.getElementById("username_display").textContent +=
+            "Welcome back, " + storedUsername + "!";
+        } else {
+          document.getElementById("username_display").textContent +=
+            "Please log in to track your progress :)";
+        }
+      </script>
+    </div>
+    <div class="spacer"></div>
+    <div class="container container2">
+      <a class="button button1" href="../public">
+        practice in the public room
+      </a>
+      <a class="button button2" href="../chatbot"> practice with phineas! </a>
+      <a class="button button3" href="../private">
+        practice in a private room
+      </a>
+    </div>
+    <div class="spacer"></div>
+    <div class="container">
+      <a class="button button4" href="../achievements"> achievements </a>
+    </div>
+    <div class="container">
+      <a class="button button5" href="../about"> about </a>
+    </div>
+  </body>
+</html>

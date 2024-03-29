@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+$font: "Nunito", sans-serif;
+
+$light: (
+  bg: rgb(250, 244, 237),
+  box: rgb(255, 250, 243),
+  overlay: rgb(242, 233, 222),
+  fg: rgb(87, 82, 121),
+  fg-subtle: rgba(121, 117, 147, 0.5),
+  red: rgb(205, 55, 55),
+  yellow: rgb(234, 157, 52),
+  yellow-hover: rgb(246, 193, 119),
+  blue: rgb(40, 105, 131),
+  blue-hover: rgb(62, 143, 176),
+  purple: rgb(144, 122, 169),
+  purple-hover: rgb(196, 167, 231),
+  pink: rgb(180, 99, 122),
+  pink-hover: rgb(235, 111, 146),
+);
+
+$dark: (
+  bg: rgb(35, 33, 54),
+  box: rgb(42, 39, 63),
+  overlay: rgb(57, 53, 82),
+  fg: rgb(224, 222, 244),
+  fg-subtle: rgba(144, 140, 170, 0.5),
+  red: rgb(205, 55, 55),
+  yellow: rgb(246, 193, 119),
+  yellow-hover: rgb(234, 157, 52),
+  blue: rgb(62, 143, 176),
+  blue-hover: rgb(40, 105, 131),
+  purple: rgb(196, 167, 231),
+  purple-hover: rgb(144, 122, 169),
+  pink: rgb(235, 111, 146),
+  pink-hover: rgb(180, 99, 122),
+);
+
+@function t($property, $theme: $light) {
+  @return map-get($theme, $property);
+}
+
+// @mixin themed() {
+//   @each $theme, $map in $themes {
+//     .theme--#{$theme} & {
+//       $theme-map: () !global;
+//       @each $key, $submap in $map {
+//         $value: map-get(map-get($themes, $theme), '#{$key}');
+//         $theme-map: map-merge($theme-map, ($key: $value)) !global;
+//       }
+//       @content;
+//       $theme-map: () !global;
+//     }
+//   }
+// }
+
+// @function t($key) {
+//   @return map-get($theme-map, $key);
+// }

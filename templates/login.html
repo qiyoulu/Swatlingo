@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo: login</title>
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/email.js"></script>
+  </head>
+  <body>
+    <div class="container container-header">
+      <img src="../static/swatlingo.svg" alt="swatlingo" class="logo" />
+    </div>
+    <div class="spacer"></div>
+    <div class="container container-login">
+      <form id="loginForm" method="POST" onsubmit="validateEmail(event)">
+        <input
+          class="container container-prompt text text-p"
+          type="email"
+          id="email_box"
+          name="email"
+          placeholder="phineas1@swarthmore.edu"
+          autofocus
+        />
+        <button
+          class="button button-login"
+          type="submit"
+          onclick="saveUsername()"
+        >
+          login / sign up
+        </button>
+      </form>
+    </div>
+    <div class="spacer"></div>
+    <div class="container">
+      <p class="text text-disclaimer">
+        The chats in this app are unmonitored. <br />
+        Please be nice to other people and Phineas! <br />
+        Have fun learning :) <br />
+      </p>
+    </div>
+  </body>
+</html>

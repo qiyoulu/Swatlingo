@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo: practice in the public room</title>
+    <script src="https://unpkg.com/socket.io-client@4/dist/socket.io.min.js"></script>
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/chat.css" />
+    <script src="../static/email.js"></script>
+    <script src="../static/publicChatroom.js"></script>
+    <script>
+      window.addEventListener("load", updatePublicChatAchievement); //there is an error here
+      setInterval(updateMinutesSpent, 60000);
+    </script>
+  </head>
+  <body>
+    <script src="../static/themes.js"></script>
+    <div class="container container-header">
+      <div class="container">
+        <a href="../home">
+          <img src="../static/home.svg" alt="home" class="icon" />
+        </a>
+      </div>
+      <h1 class="text text-h1">chat in the public room</h1>
+      <!-- <a href="../settings"> -->
+      <img
+        src="../static/light.svg"
+        id="theme-toggle"
+        alt="toggle theme"
+        class="icon"
+        onclick="toggle_theme()"
+      />
+      <!-- </a> -->
+    </div>
+    <div class="container container-chat">
+      <div class="messages">
+        <div class="text text-p">
+          <p id="output"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container container-prompt">
+      <input
+        id="message"
+        class="textbox text text-p"
+        type="text"
+        placeholder="Say something in the language you're learning"
+        minlength="1"
+        required
+        autofocus
+      />
+      <button id="sendButton">
+        <img src="../static/send.svg" alt="send" id="sendIcon" />
+      </button>
+    </div>
+  </body>
+</html>

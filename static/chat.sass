@@ -1,0 +1,297 @@
+@import '_themes'
+
+body
+    background-color: t(bg)
+    transition: 0.5s
+    
+    .text
+        transition: 0.5s
+        display: flex
+        font: 1vw $font
+        color: t(fg)
+        &-h1
+            margin: auto
+            font:
+                size: 4vw
+                weight: bold
+            color: t(red)
+            position: fixed center
+            flex-shrink: 1
+        &-h2
+            font:
+                size: 3vw
+        &-h3
+            font:
+                size: 2vw
+        &-p
+            margin: 1vw
+            font:
+                size: large
+
+    ::placeholder
+        color: t(fg-subtle)
+
+    .messages
+        transition: 0.5s
+        max-height: 70vh
+        overflow:
+            x: wrap
+            y: auto
+        scrollbar-color: transparent transparent
+
+    .bot-message
+        transition: 0.5s
+        font: large $font
+        color: t(pink)
+
+    .extra-line
+        transition: 0.5s
+        height: 16px
+        margin: 0
+        padding: 0
+        border: none
+
+    .container
+        transition: 0.5s
+        display: flex
+        flex-flow: row wrap
+        &-header
+            flex: 0 0 auto
+            position: fixed
+            margin: 0
+            width: 90%
+            margin:
+                left: 5vw
+                right: 5vw
+                top: 1vh
+            justify-content: space-between
+        &-chat
+            flex-direction: column-reverse
+            background:
+                color: t(overlay)
+            margin:
+                left: 26vw
+            padding: 1vw
+            height: 70vh
+            line-height: 200%
+            position: fixed
+            top: 15vh
+            border: none
+            width: 47vw
+            border: none
+                radius: 24px
+            scroll-behavior: smooth
+        &-prompt
+            position: fixed
+            width: 50vw
+            left: 26vw
+            bottom: 1vw
+            margin: auto
+            background-color: t(box)
+            border: none
+                radius: 24px
+
+    .icon
+        transition: 0.5s
+        display: flex
+        width: 5vw
+        border: none
+            radius: 24px
+        &:hover
+            background-color: t(overlay)
+
+    #sendIcon
+        transition: 0.5s
+        display: flex
+        width: 2vw
+        margin: auto
+
+    .logo
+        transition: 0.5s
+        display: flex
+        margin: auto
+        width: 50%
+        border: none
+            radius: 24px
+
+    .textbox
+        transition: 0.5s
+        border: none
+            radius: 24px
+        outline: none
+        background-color: t(box)
+        text-align: left
+        flex-grow: 1
+        overflow: hidden
+
+    #sendButton
+        transition: 0.5s
+        border: none
+            radius: 24px
+        background-color: t(yellow)
+        font: medium $font
+        color: t(bg)
+        width: 4vw
+        &:hover
+            background-color: t(yellow-hover)
+
+    #loading-animation
+        transition: 0.5s
+        width: 8vw
+        height: 8vw
+        border: none
+        margin: 0
+        display: none
+
+    .spacer
+        transition: 0.5s
+        margin:
+            top: 10vw
+
+body.dark
+    background-color: t(bg, $dark)
+    transition: 0.5s
+    
+    .text
+        transition: 0.5s
+        display: flex
+        font: 1vw $font
+        color: t(fg, $dark)
+        &-h1
+            margin: auto
+            font:
+                size: 4vw
+                weight: bold
+            color: t(red, $dark)
+            position: fixed center
+            flex-shrink: 1
+        &-h2
+            font:
+                size: 3vw
+        &-h3
+            font:
+                size: 2vw
+        &-p
+            margin: 1vw
+            font:
+                size: large
+
+    ::placeholder
+        color: t(fg-subtle, $dark)
+
+    .messages
+        transition: 0.5s
+        max-height: 70vh
+        overflow:
+            x: wrap
+            y: auto
+        scrollbar-color: transparent transparent
+
+    .bot-message
+        transition: 0.5s
+        font: large $font
+        color: t(pink, $dark)
+
+    .extra-line
+        transition: 0.5s
+        height: 16px
+        margin: 0
+        padding: 0
+        border: none
+
+    .container
+        transition: 0.5s
+        display: flex
+        flex-flow: row wrap
+        &-header
+            flex: 0 0 auto
+            position: fixed
+            margin: 0
+            width: 90%
+            margin:
+                left: 5vw
+                right: 5vw
+                top: 1vh
+            justify-content: space-between
+        &-chat
+            flex-direction: column-reverse
+            background:
+                color: t(overlay, $dark)
+            margin:
+                left: 26vw
+            padding: 1vw
+            height: 70vh
+            line-height: 200%
+            position: fixed
+            top: 15vh
+            border: none
+            width: 47vw
+            border: none
+                radius: 24px
+            scroll-behavior: smooth
+        &-prompt
+            position: fixed
+            width: 50vw
+            left: 26vw
+            bottom: 1vw
+            margin: auto
+            background-color: t(box, $dark)
+            border: none
+                radius: 24px
+
+    .icon
+        transition: 0.5s
+        display: flex
+        width: 5vw
+        border: none
+            radius: 24px
+        &:hover
+            background-color: t(overlay, $dark)
+
+    #sendIcon
+        transition: 0.5s
+        display: flex
+        width: 2vw
+        margin: auto
+
+    .logo
+        transition: 0.5s
+        display: flex
+        margin: auto
+        width: 50%
+        border: none
+            radius: 24px
+
+    .textbox
+        transition: 0.5s
+        border: none
+            radius: 24px
+        outline: none
+        background-color: t(box, $dark)
+        text-align: left
+        flex-grow: 1
+        overflow: hidden
+
+    #sendButton
+        transition: 0.5s
+        border: none
+            radius: 24px
+        background-color: t(yellow, $dark)
+        font: medium $font
+        color: t(bg, $dark)
+        width: 4vw
+        &:hover
+            background-color: t(yellow-hover, $dark)
+
+    #loading-animation
+        transition: 0.5s
+        width: 8vw
+        height: 8vw
+        border: none
+        margin: 0
+        display: none
+
+    .spacer
+        transition: 0.5s
+        margin:
+            top: 10vw

@@ -1,0 +1,600 @@
+@import '_themes'
+
+body
+    // +themed
+    background-color: t(bg)
+    transition: 0.5s
+
+    .text
+        transition: 0.5s
+        // +themed
+        display: flex
+        font: 2vh $font
+        color: t(fg)
+        line-height: auto
+        &-h1
+            // +themed
+            margin: auto
+            font:
+                size: 8vh
+                weight: bold
+            color: t(red)
+            position: fixed center
+            flex-shrink: 1
+        &-h2
+            // +themed
+            font:
+                size: 6vh
+        &-h3
+            // +themed
+            font:
+                size: 4vh
+            color: t(bg)
+        &-h4
+            // +themed
+            font:
+                size: 3vh
+            color: t(fg)
+        &-p
+            // +themed
+            font:
+                size: 2vh
+        &-counter
+            // +themed
+            font:
+                size: 4vh
+                weight: bold
+            color: t(yellow)
+        &-disclaimer
+            // +themed
+            font:
+                size: 2vh
+            display: flex
+            margin: auto
+            text-align: center
+
+    .center
+        transition: 0.5s
+        text-align: center
+
+    .justify
+        transition: 0.5s
+        text-justify: newspaper
+        text-align: justify
+
+    .time_studied
+        transition: 0.5s
+        font: bold $font
+        color: t(purple)
+
+    .chats_sent
+        transition: 0.5s
+        font: bold $font
+        color: t(blue)
+
+    .streak
+        transition: 0.5s
+        font: bold $font
+        color: t(yellow)
+
+    .other-achievements
+        transition: 0.5s
+        font: bold $font
+        color: t(pink)
+
+    ::placeholder
+        // +themed
+        color: t(fg-subtle)
+
+    #username_display
+        transition: 0.5s
+        // +themed
+        display: flex
+        font: 3vh $font
+            weight: bold
+        color: t(pink)
+        margin: auto
+
+    .container
+        transition: 0.5s
+        // +themed
+        display: flex
+        flex-flow: row wrap
+        &-header
+            // +themed
+            width: 90%
+            height: auto
+            margin:
+                left: 5%
+                right: 5%
+                top: 2%
+            justify-content: space-between
+            overflow: hidden
+        &2
+            // +themed
+            width: 100%
+            margin: auto
+            justify-content: space-evenly
+        &-login
+            // +themed
+            margin: auto
+            width: 25vw
+            background:
+                color: t(overlay)
+            border: none
+                radius: 48px
+            padding:
+                left: 4vw
+                right: 4vw
+                top: 4vh
+                bottom: 4vh
+            justify-content: center
+        &-prompt
+            // +themed
+            flex: 0 0 auto
+            width: 24vw
+            margin: auto
+            background-color: t(box)
+            border: none
+                radius: 24px
+            height: 12w
+            justify-content: center
+            padding-left: 1vw
+        &-about
+            // +themed
+            margin: auto
+            width: 67%
+        &-list
+            // +themed
+            margin: auto
+            display: block
+        &-achievement
+            // +themed
+            margin: auto
+                top: 5vh
+            width: 40vw
+            background-color: t(overlay)
+            border: none
+                radius: 24px
+            justify-content: space-evenly
+            padding:
+                top: 1vh
+                bottom: 1vh
+        &-room
+            // +themed
+            margin: 5vw
+            padding: 1vw
+
+    .icon
+        transition: 0.5s
+        // +themed
+        display: flex
+        width: 5vw
+        height: 5vw
+        border: none
+            radius: 24px
+        &:hover
+            // +themed
+            background-color: t(overlay)
+        &-achievements
+            // +themed
+            width: 10vw
+            height: 10vw
+            margin: auto
+                bottom: 0
+
+    .logo
+        transition: 0.5s
+        // +themed
+        display: flex
+        margin: auto
+        width: 50%
+        border: none
+            radius: 24px
+
+    .button
+        transition: 0.5s
+        // +themed
+        display: flex
+        margin: auto
+            bottom: 1vh
+        padding: 1vh
+            left: 2vw
+            right: 2vw
+        border: none
+            radius: 24px
+        color: t(bg)
+        font: xx-large $font
+            weight: bold
+        text-decoration: none
+        &:hover
+            // +themed
+            transition: background-color 0.5s
+        &1
+            // +themed
+            background-color: t(pink)
+            &:hover
+                // +themed
+                background-color: t(pink-hover)
+        &2
+            // +themed
+            background-color: t(blue)
+            &:hover
+                // +themed
+                background-color: t(blue-hover)
+        &3
+            // +themed
+            background-color: t(purple)
+            &:hover
+                // +themed
+                background-color: t(purple-hover)
+        &4
+            // +themed
+            justify-content: center
+            background-color: t(yellow)
+            color: t(bg)
+            &:hover
+                // +themed
+                background-color: t(yellow-hover)
+        &5
+            // +themed
+            justify-content: center
+            background-color: t(bg)
+            color: t(fg)
+            &:hover
+                // +themed
+                background-color: t(overlay)
+        &-login
+            // +themed
+            background-color: t(yellow)
+            justify-content: center
+            font: large $font
+                weight: bold
+            margin:
+                top: 4vh
+            &:hover
+                // +themed
+                background-color: t(yellow-hover)
+        &-newroom
+            // +themed
+            background-color: t(yellow)
+            justify-content: center
+            font: large $font
+                weight: bold
+            width: 20vw
+            margin:
+                left: 40vw
+            &:hover
+                // +themed
+                background-color: t(yellow-hover)
+
+    .spacer
+        transition: 0.5s
+        // +themed
+        margin:
+            top: 10vw
+
+    .chat-area
+        transition: 0.5s
+        // +themed
+        background-color: t(overlay)
+        border: none
+            radius: 24px
+        font: 2vh $font
+        color: t(fg)
+        &:hover
+            // +themed
+            background-color: t(overlay)
+            padding: 1vh
+            left: 1vw
+            margin: 1vh
+            justify-content: space-between
+
+    .room-input
+        transition: 0.5s
+        // +themed
+        background-color: t(box)
+        border: none
+            radius: 48px
+        font: 2vh $font
+        color: t(fg)
+        margin: 1vh
+
+body.dark
+    // +themed
+    background-color: t(bg, $dark)
+    transition: 0.5s
+
+    .text
+        transition: 0.5s
+        // +themed
+        display: flex
+        font: 2vh $font
+        color: t(fg, $dark)
+        line-height: auto
+        &-h1
+            // +themed
+            margin: auto
+            font:
+                size: 8vh
+                weight: bold
+            color: t(red, $dark)
+            position: fixed center
+            flex-shrink: 1
+        &-h2
+            // +themed
+            font:
+                size: 6vh
+        &-h3
+            // +themed
+            font:
+                size: 4vh
+            color: t(bg, $dark)
+        &-h4
+            // +themed
+            font:
+                size: 3vh
+            color: t(fg, $dark)
+        &-p
+            // +themed
+            font:
+                size: 2vh
+        &-counter
+            // +themed
+            font:
+                size: 4vh
+                weight: bold
+            color: t(yellow, $dark)
+        &-disclaimer
+            // +themed
+            font:
+                size: 2vh
+            display: flex
+            margin: auto
+            text-align: center
+
+    .center
+        transition: 0.5s
+        text-align: center
+
+    .justify
+        transition: 0.5s
+        text-justify: newspaper
+        text-align: justify
+
+    .time_studied
+        transition: 0.5s
+        font: bold $font
+        color: t(purple, $dark)
+
+    .chats_sent
+        transition: 0.5s
+        font: bold $font
+        color: t(blue, $dark)
+
+    .streak
+        transition: 0.5s
+        font: bold $font
+        color: t(yellow, $dark)
+
+    .other-achievements
+        transition: 0.5s
+        font: bold $font
+        color: t(pink, $dark)
+
+    ::placeholder
+        // +themed
+        color: t(fg-subtle, $dark)
+
+    #username_display
+        transition: 0.5s
+        // +themed
+        display: flex
+        font: 3vh $font
+            weight: bold
+        color: t(pink, $dark)
+        margin: auto
+
+    .container
+        transition: 0.5s
+        // +themed
+        display: flex
+        flex-flow: row wrap
+        &-header
+            // +themed
+            width: 90%
+            height: auto
+            margin:
+                left: 5%
+                right: 5%
+                top: 2%
+            justify-content: space-between
+            overflow: hidden
+        &2
+            // +themed
+            width: 100%
+            margin: auto
+            justify-content: space-evenly
+        &-login
+            // +themed
+            margin: auto
+            width: 25vw
+            background:
+                color: t(overlay, $dark)
+            border: none
+                radius: 48px
+            padding:
+                left: 4vw
+                right: 4vw
+                top: 4vh
+                bottom: 4vh
+            justify-content: center
+        &-prompt
+            // +themed
+            flex: 0 0 auto
+            width: 24vw
+            margin: auto
+            background-color: t(box, $dark)
+            border: none
+                radius: 24px
+            height: 12w
+            justify-content: center
+            padding-left: 1vw
+        &-about
+            // +themed
+            margin: auto
+            width: 67%
+        &-list
+            // +themed
+            margin: auto
+            display: block
+        &-achievement
+            // +themed
+            margin: auto
+                top: 5vh
+            width: 40vw
+            background-color: t(overlay, $dark)
+            border: none
+                radius: 24px
+            justify-content: space-evenly
+            padding:
+                top: 1vh
+                bottom: 1vh
+        &-room
+            // +themed
+            margin: 5vw
+            padding: 1vw
+
+    .icon
+        transition: 0.5s
+        // +themed
+        display: flex
+        width: 5vw
+        border: none
+            radius: 24px
+        &:hover
+            // +themed
+            background-color: t(overlay, $dark)
+        &-achievements
+            // +themed
+            width: 10vw
+            height: 10vw
+            margin: auto
+                bottom: 0
+
+    .logo
+        transition: 0.5s
+        // +themed
+        display: flex
+        margin: auto
+        width: 50%
+        border: none
+            radius: 24px
+
+    .button
+        transition: 0.5s
+        // +themed
+        display: flex
+        margin: auto
+            bottom: 1vh
+        padding: 1vh
+            left: 2vw
+            right: 2vw
+        border: none
+            radius: 24px
+        color: t(bg, $dark)
+        font: xx-large $font
+            weight: bold
+        text-decoration: none
+        &:hover
+            // +themed
+            transition: background-color 0.5s
+        &1
+            // +themed
+            background-color: t(pink, $dark)
+            &:hover
+                // +themed
+                background-color: t(pink-hover, $dark)
+        &2
+            // +themed
+            background-color: t(blue, $dark)
+            &:hover
+                // +themed
+                background-color: t(blue-hover, $dark)
+        &3
+            // +themed
+            background-color: t(purple, $dark)
+            &:hover
+                // +themed
+                background-color: t(purple-hover, $dark)
+        &4
+            // +themed
+            justify-content: center
+            background-color: t(yellow, $dark)
+            color: t(bg, $dark)
+            &:hover
+                // +themed
+                background-color: t(yellow-hover, $dark)
+        &5
+            // +themed
+            justify-content: center
+            background-color: t(bg, $dark)
+            color: t(fg, $dark)
+            &:hover
+                // +themed
+                background-color: t(overlay, $dark)
+        &-login
+            // +themed
+            background-color: t(yellow, $dark)
+            justify-content: center
+            font: large $font
+                weight: bold
+            margin:
+                top: 4vh
+            &:hover
+                // +themed
+                background-color: t(yellow-hover, $dark)
+        &-newroom
+            // +themed
+            background-color: t(yellow, $dark)
+            justify-content: center
+            font: large $font
+                weight: bold
+            width: 20vw
+            margin:
+                left: 40vw
+            &:hover
+                // +themed
+                background-color: t(yellow-hover, $dark)
+
+    .spacer
+        transition: 0.5s
+        // +themed
+        margin:
+            top: 10vw
+
+    .chat-area
+        transition: 0.5s
+        // +themed
+        background-color: t(overlay, $dark)
+        border: none
+            radius: 24px
+        font: 2vh $font
+        color: t(fg, $dark)
+        &:hover
+            // +themed
+            background-color: t(overlay, $dark)
+            padding: 1vh
+            left: 1vw
+            margin: 1vh
+            justify-content: space-between
+
+    .room-input
+        transition: 0.5s
+        // +themed
+        background-color: t(box, $dark)
+        border: none
+            radius: 48px
+        font: 2vh $font
+        color: t(fg, $dark)
+        margin: 1vh

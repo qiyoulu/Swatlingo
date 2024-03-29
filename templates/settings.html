@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>swatlingo: settings</title>
+    <link rel="icon" href="../static/favicon.png" type="image/png" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/email.js"></script>
+    <script>
+      window.addEventListener("load", getStreak);
+      window.addEventListener("load", updateDisplayedUsername);
+    </script>
+  </head>
+  <body>
+    <div class="container container-header">
+      <div class="container">
+        <a href="../achievements">
+          <img src="../static/streak.svg" alt="streak" class="icon" />
+        </a>
+        <h1 class="text text-counter" id="streak"></h1>
+      </div>
+      <img src="../static/swatlingo.svg" alt="swatlingo" class="logo" />
+      <a href="../home">
+        <img src="../static/home.svg" alt="home" class="icon" />
+      </a>
+    </div>
+    <div class="container">
+      <p id="username_display"></p>
+      <script>
+        const storedUsername = localStorage.getItem("username");
+        if (storedUsername) {
+          document.getElementById("username_display").textContent +=
+            "Welcome back, " + storedUsername + "!";
+        } else {
+          document.getElementById("username_display").textContent +=
+            "Please log in to track your progress :)";
+        }
+      </script>
+    </div>
+    <div class="spacer"></div>
+    <div class="container container-login">
+      <form id="usernameForm" method="POST" onsubmit="updateUsername(event)">
+        <input
+          class="container container-prompt text text-p"
+          type="text"
+          id="username_box"
+          name="username"
+          placeholder="phineas"
+          autofocus
+        />
+        <button class="button button-login" type="submit">
+          change username
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

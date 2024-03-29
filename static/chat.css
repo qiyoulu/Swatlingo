@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body {
+  background-color: rgb(250, 244, 237);
+  transition: 0.5s;
+}
+body .text {
+  transition: 0.5s;
+  display: flex;
+  font: 1vw "Nunito", sans-serif;
+  color: rgb(87, 82, 121);
+}
+body .text-h1 {
+  margin: auto;
+  font-size: 4vw;
+  font-weight: bold;
+  color: rgb(205, 55, 55);
+  position: fixed center;
+  flex-shrink: 1;
+}
+body .text-h2 {
+  font-size: 3vw;
+}
+body .text-h3 {
+  font-size: 2vw;
+}
+body .text-p {
+  margin: 1vw;
+  font-size: large;
+}
+body ::placeholder {
+  color: rgba(121, 117, 147, 0.5);
+}
+body .messages {
+  transition: 0.5s;
+  max-height: 70vh;
+  overflow-x: wrap;
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+}
+body .bot-message {
+  transition: 0.5s;
+  font: large "Nunito", sans-serif;
+  color: rgb(180, 99, 122);
+}
+body .extra-line {
+  transition: 0.5s;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body .container {
+  transition: 0.5s;
+  display: flex;
+  flex-flow: row wrap;
+}
+body .container-header {
+  flex: 0 0 auto;
+  position: fixed;
+  margin: 0;
+  width: 90%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 1vh;
+  justify-content: space-between;
+}
+body .container-chat {
+  flex-direction: column-reverse;
+  background-color: rgb(242, 233, 222);
+  margin-left: 26vw;
+  padding: 1vw;
+  height: 70vh;
+  line-height: 200%;
+  position: fixed;
+  top: 15vh;
+  border: none;
+  width: 47vw;
+  border: none;
+  border-radius: 24px;
+  scroll-behavior: smooth;
+}
+body .container-prompt {
+  position: fixed;
+  width: 50vw;
+  left: 26vw;
+  bottom: 1vw;
+  margin: auto;
+  background-color: rgb(255, 250, 243);
+  border: none;
+  border-radius: 24px;
+}
+body .icon {
+  transition: 0.5s;
+  display: flex;
+  width: 5vw;
+  border: none;
+  border-radius: 24px;
+}
+body .icon:hover {
+  background-color: rgb(242, 233, 222);
+}
+body #sendIcon {
+  transition: 0.5s;
+  display: flex;
+  width: 2vw;
+  margin: auto;
+}
+body .logo {
+  transition: 0.5s;
+  display: flex;
+  margin: auto;
+  width: 50%;
+  border: none;
+  border-radius: 24px;
+}
+body .textbox {
+  transition: 0.5s;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+  background-color: rgb(255, 250, 243);
+  text-align: left;
+  flex-grow: 1;
+  overflow: hidden;
+}
+body #sendButton {
+  transition: 0.5s;
+  border: none;
+  border-radius: 24px;
+  background-color: rgb(234, 157, 52);
+  font: medium "Nunito", sans-serif;
+  color: rgb(250, 244, 237);
+  width: 4vw;
+}
+body #sendButton:hover {
+  background-color: rgb(246, 193, 119);
+}
+body #loading-animation {
+  transition: 0.5s;
+  width: 8vw;
+  height: 8vw;
+  border: none;
+  margin: 0;
+  display: none;
+}
+body .spacer {
+  transition: 0.5s;
+  margin-top: 10vw;
+}
+
+body.dark {
+  background-color: rgb(35, 33, 54);
+  transition: 0.5s;
+}
+body.dark .text {
+  transition: 0.5s;
+  display: flex;
+  font: 1vw "Nunito", sans-serif;
+  color: rgb(224, 222, 244);
+}
+body.dark .text-h1 {
+  margin: auto;
+  font-size: 4vw;
+  font-weight: bold;
+  color: rgb(205, 55, 55);
+  position: fixed center;
+  flex-shrink: 1;
+}
+body.dark .text-h2 {
+  font-size: 3vw;
+}
+body.dark .text-h3 {
+  font-size: 2vw;
+}
+body.dark .text-p {
+  margin: 1vw;
+  font-size: large;
+}
+body.dark ::placeholder {
+  color: rgba(144, 140, 170, 0.5);
+}
+body.dark .messages {
+  transition: 0.5s;
+  max-height: 70vh;
+  overflow-x: wrap;
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+}
+body.dark .bot-message {
+  transition: 0.5s;
+  font: large "Nunito", sans-serif;
+  color: rgb(235, 111, 146);
+}
+body.dark .extra-line {
+  transition: 0.5s;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body.dark .container {
+  transition: 0.5s;
+  display: flex;
+  flex-flow: row wrap;
+}
+body.dark .container-header {
+  flex: 0 0 auto;
+  position: fixed;
+  margin: 0;
+  width: 90%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 1vh;
+  justify-content: space-between;
+}
+body.dark .container-chat {
+  flex-direction: column-reverse;
+  background-color: rgb(57, 53, 82);
+  margin-left: 26vw;
+  padding: 1vw;
+  height: 70vh;
+  line-height: 200%;
+  position: fixed;
+  top: 15vh;
+  border: none;
+  width: 47vw;
+  border: none;
+  border-radius: 24px;
+  scroll-behavior: smooth;
+}
+body.dark .container-prompt {
+  position: fixed;
+  width: 50vw;
+  left: 26vw;
+  bottom: 1vw;
+  margin: auto;
+  background-color: rgb(42, 39, 63);
+  border: none;
+  border-radius: 24px;
+}
+body.dark .icon {
+  transition: 0.5s;
+  display: flex;
+  width: 5vw;
+  border: none;
+  border-radius: 24px;
+}
+body.dark .icon:hover {
+  background-color: rgb(57, 53, 82);
+}
+body.dark #sendIcon {
+  transition: 0.5s;
+  display: flex;
+  width: 2vw;
+  margin: auto;
+}
+body.dark .logo {
+  transition: 0.5s;
+  display: flex;
+  margin: auto;
+  width: 50%;
+  border: none;
+  border-radius: 24px;
+}
+body.dark .textbox {
+  transition: 0.5s;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+  background-color: rgb(42, 39, 63);
+  text-align: left;
+  flex-grow: 1;
+  overflow: hidden;
+}
+body.dark #sendButton {
+  transition: 0.5s;
+  border: none;
+  border-radius: 24px;
+  background-color: rgb(246, 193, 119);
+  font: medium "Nunito", sans-serif;
+  color: rgb(35, 33, 54);
+  width: 4vw;
+}
+body.dark #sendButton:hover {
+  background-color: rgb(234, 157, 52);
+}
+body.dark #loading-animation {
+  transition: 0.5s;
+  width: 8vw;
+  height: 8vw;
+  border: none;
+  margin: 0;
+  display: none;
+}
+body.dark .spacer {
+  transition: 0.5s;
+  margin-top: 10vw;
+}
+
+/*# sourceMappingURL=chat.css.map */
