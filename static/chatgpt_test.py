@@ -1,7 +1,6 @@
 import openai  # You will need to pip3 install this python module
 import os
 
-openai.api_key = ""
 msgs = [{"role": "system", "content": "You are a intelligent assistant."}]
 
 
